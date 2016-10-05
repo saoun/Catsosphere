@@ -14,7 +14,6 @@ User.delete_all
   User.create(fullname: name,
               contact: Faker::Internet.email(name),
               bio: Faker::Hacker.say_something_smart,
-
               )
 end
 
