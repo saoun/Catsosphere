@@ -5,15 +5,16 @@
   <nav>
     <a href="#" id="menu-icon"></a>
     <ul class="navUL">
-      <li><a href="/about">ABOUT</a></li>
-      <li><a href="/projects">PROJECTS</a></li>
-      <li><a href="/workshops">WORKSHOPS</a></li>
-      <li><a href="/cv">CV</a></li>
-      <li><a href="/photo">PHOTO</a></li>
-      <li><a href="/contact">CONTACT</a></li>
+      <li><a href="/">ALL POSTS</a></li>
+      <li><a href="posts/new">NEW POST</a></li>
+
+      <% if current_user %>
+      <li><a class="menu" href="/users/<%=current_user.id%>">PROFILE</a></li>
+        <% else %>
+      <li><a class="menu" href="/auth/twitter">SIGN IN</a></li>
+        <% end %>
 
     </ul>
-
   </nav>
 
  </header>
