@@ -1,0 +1,21 @@
+<%= render "posts/navbar" %>
+
+
+<% if current_user %>
+  <h1><%= "Welcome #{current_user.name}" %></h1>
+
+  <h5><%= link_to "Sign out", "/signout" %></h5> <br>
+<!--   <h5><a href ="users/<%=current_user.id%>/edit">Edit</a></h5>
+ -->
+  <br>
+
+<!--   <h5><a href ="/users">Show All</a></h5><br>
+ -->
+
+
+<!-- if current user, then can edit / add things to database -->
+
+
+<% else %>
+  <h1><%= link_to "Sign in with Twitter", "/auth/twitter" %></h1>
+<% end %>
