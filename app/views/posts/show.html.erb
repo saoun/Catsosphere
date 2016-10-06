@@ -6,21 +6,20 @@
 
   <article>
 
-    <h2><%= @post.title %></h2>
-    <h3>By: <%= @post.user.fullname %></h3>
-    <time>Created <%= @post.created_at %></time>
+    <h2 class="postTitle"><%= @post.title %></h2>
+    <h5 class="caption">By <%= @post.user.fullname %> | Posted on <%= @post.created_at.to_date %></h5>
     <p><%= @post.content %></p>
       <%= link_to "Edit", edit_post_path(@post) %> |
       <%= link_to "Delete", post_path(@post), method: :delete %>
-
+    <div class="dividerComment"></div>
     <div class='comments'>
-      <h3>Comments</h3>
+      <h2><%= @post.comments.count %> Replies</h2>
       <%= link_to "Add new comment", new_post_comment_path(@post) %>
       <div class="dividerComment"></div>
       <% @post.comments.each do |comment| %>
         <div>
           <p><%= comment.content %></p>
-          <time>Created <%= comment.created_at %></time><br>
+          <time>Created <%= comment.created_at.to_date %></time><br>
           <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
           <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
         </div>
