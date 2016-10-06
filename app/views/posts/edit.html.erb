@@ -1,7 +1,12 @@
 <%= render "navbar" %>
 
 <div class="newPost">
-  <%= link_to "&larr; Back".html_safe, post_path %>
-  <h2>Edit Post</h2>
-  <%= render "form" %>
+  <% if current_user %>
+    <%= link_to "&larr; Back".html_safe, post_path %>
+    <h2>Edit Post</h2>
+    <%= render "form" %>
+  <%else%>
+    <%= link_to "&larr; Back".html_safe, post_path %>
+    <h2>Only the author of this post can edit it.</h2>
+  <%end%>
 </div>
