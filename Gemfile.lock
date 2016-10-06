@@ -56,6 +56,8 @@ GEM
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
+    emoji (1.0.7)
+      json
     erubis (2.7.0)
     execjs (2.7.0)
     factory_girl (4.7.0)
@@ -219,6 +221,7 @@ DEPENDENCIES
   better_errors
   byebug
   coffee-rails (~> 4.2)
+  emoji
   factory_girl
   faker
   jbuilder (~> 2.5)
