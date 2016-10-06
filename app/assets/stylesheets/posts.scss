@@ -8,8 +8,22 @@
 }
 
 .viewAllPosts {
-  margin-left: 60px;
+  text-align: center;
   margin-top: 100px;
+}
+
+.postTitle {
+  font-size: 30px;
+  color: #2e373d;
+  font-weight: 400;
+}
+
+.postTitle a {
+  color: #2e373d;
+}
+
+.postTitle a:hover {
+  color: #f3554c;
 }
 
 .viewPost {
@@ -17,8 +31,10 @@
   margin-top: 100px;
 }
 
-hr {
-  margin-right: 60px;
+.divider {
+  margin: 30px 120px 0 120px;
+  background-color: #e0dfdf;
+  height: 1px;
 }
 
 time {

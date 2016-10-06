@@ -5,10 +5,10 @@
 <div class="viewAllPosts">
   <% @posts.each do |post| %>
     <article>
-      <h2><%= link_to post.title, post_path(post) %></h2>
-      <time>Updated <%= post.updated_at %></time>
+      <h2 class="postTitle"><%= link_to post.title, post_path(post) %></h2>
+      <time>Created at <%= post.created_at %></time>
       <p><%= post.content %></p>
     </article>
-    <hr>
+    <div class="divider"></div>
   <% end %>
 </div>
