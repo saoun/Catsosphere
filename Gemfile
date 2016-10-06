@@ -38,6 +38,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'pry'
+gem 'emoji'
 
 
 
