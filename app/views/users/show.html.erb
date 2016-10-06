@@ -1,5 +1,7 @@
 <%= render "posts/navbar" %>
 
+<div class="profile">
+
 
 <% if current_user %>
   <h1><%= "Welcome #{current_user.name}" %></h1>
@@ -19,3 +21,5 @@
 <% else %>
   <h1><%= link_to "Sign in with Twitter", "/auth/twitter" %></h1>
 <% end %>
+
+</div>
