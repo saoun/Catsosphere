@@ -1,13 +1,13 @@
 <header id="header">
 
-  <h3 id="logo"><a href="/">MY BLOG</a></h3>
+  <h3 id="logo"><a href="/">CATSOSPHERE</a></h3>
 
   <nav>
     <a href="#" id="menu-icon"></a>
     <ul class="navUL">
       <li><a href="/">ALL POSTS</a></li>
       <li><a href="/posts/new">NEW POST</a></li>
-
+      <li><a href="/users">ALL USERS</a></li>
       <% if current_user %>
       <li><a class="menu" href="/users/<%=current_user.id%>">PROFILE</a></li>
         <% else %>

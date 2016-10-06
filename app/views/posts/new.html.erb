@@ -1,7 +1,9 @@
 <%= render "navbar" %>
-
 <div class="newPost">
-  <h2>New Post</h2>
-  <%= render "form" %>
+  <% if current_user %>
+    <h2>New Post</h2>
+    <%= render "form" %>
+  <%else%>
+    <h2><a href="/auth/twitter">Sign in</a> or <a href="/auth/twitter">sign up</a> to create a new post!</h2>
+  <%end%>
 </div>
-

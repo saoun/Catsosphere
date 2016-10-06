@@ -1,0 +1,34 @@
+<%= render "posts/navbar" %>
+
+<div class="newComment">
+
+  <% if current_user %>
+    <% if current_user.fullname == "" %>
+      <h3><%= "Hi There!" %></h3>
+    <%else%>
+      <h3><%= "Hi, #{current_user.fullname}" %></h3>
+    <%end%>
+    <div class="optionsTop">
+      <h5><a href ="/users/<%=current_user.id%>">Back</a></h5>
+    </div>
+
+    <div class="dividerComment"></div>
+
+    <div class="formDiv">
+      <%= render "form" %>
+    </div>
+
+    <div class="dividerComment"></div>
+
+    <div class="optionsBottom">
+
+      <%= link_to "Sign Out", "/signout" %> <br>
+    </div>
+
+
+
+  <% else %>
+    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+  <% end %>
+
+</div>

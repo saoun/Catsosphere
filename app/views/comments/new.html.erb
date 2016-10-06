@@ -1,3 +1,9 @@
-<h2>New Comment</h2>
+<%= render "posts/navbar" %>
 
-<%= render "form" %>
+
+<div class="newComment">
+<%= link_to "&larr; Back".html_safe, posts_path %>
+  <h2>New Comment</h2>
+  <%= render "form" %>
+
+</div>

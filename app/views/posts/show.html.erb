@@ -2,27 +2,29 @@
 
 <div class="viewPost">
 
-<%= link_to "&larr; Back".html_safe, posts_path %>
-<article>
-  <h2><%= @post.title %></h2>
-  <h3><%#= @post.user.email %></h3>
-  <time>Updated <%= @post.updated_at %></time>
-  <p><%= @post.content %></p>
-  <%= link_to "Edit Post", edit_post_path(@post) %>
-  <%= link_to "Delete Post", post_path(@post), method: :delete %>
-  <div class='comments'>
-  <h3>Comments</h3>
-  <%= link_to "Add new comment", new_post_comment_path(@post) %>
-  <% @post.comments.each do |comment| %>
-    <div>
-      <time>Updated <%= comment.updated_at %></time>
-      <p>
-  <%= comment.content %>
-      </p>
-      <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
-      <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
+  <%= link_to "&larr; Back".html_safe, posts_path %>
+
+  <article>
+
+    <h2 class="postTitle"><%= @post.title %></h2>
+    <h5 class="caption">By <a href="users/<%=@post.user['id']%>"><%= @post.user.fullname %></a> | Posted on <%= @post.created_at.to_date %></h5>
+    <p class="postPreview"><%= @post.content %></p><br>
+      <%= link_to "Edit", edit_post_path(@post) %> |
+      <%= link_to "Delete", post_path(@post), method: :delete %>
+    <div class="dividerComment"></div>
+    <h2><%= @post.comments.count %> Replies</h2>
+      <%= link_to "Add new comment", new_post_comment_path(@post) %>
+
+      <% @post.comments.each do |comment| %>
+        <div class="commentBox">
+          <p class="comments"><%= comment.content %></p>
+          <h5 class="caption">Created <%= comment.created_at.to_date %></h5>
+          <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
+          <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
+        </div>
+
+       <% end %>
     </div>
-  <% end %>
-  </div>
-</article>
+
+  </article>
 </div>

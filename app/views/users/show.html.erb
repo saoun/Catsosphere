@@ -2,24 +2,49 @@
 
 <div class="profile">
 
+<% if current_user %>
+  <% if @user['fullname'] == current_user.fullname %>
+
+   <% if current_user.fullname == "" %>
+      <h1 class="welcome"><%= "Hi There!" %></h1>
+    <%else%>
+      <h1 class="welcome"><%= "Hi, #{current_user.fullname}" %></h1>
+    <%end%>
+
+    <div>
+      <h5><a href ="<%=current_user.id%>/edit">Edit Profile</a></h5>
+    </div>
+
+  <%end%>
+
+    <% if @user['fullname'] != current_user.fullname %>
+      <h1><%= @user['fullname'] %></h1>
+    <% end %>
+
+  <%else%>
+  <h1><%= @user['fullname'] %></h1>
+
+  <% end %>
+
+  <div class="dividerComment"></div>
+
+  <div class="optionsMiddle">
+    <strong>Full Name: </strong><p><%= @user['fullname'] %></p><br>
+    <strong>Bio:</strong> <p><%= @user['bio'] %></p><br>
+    <strong>Contact:</strong> <p><%= @user['contact'] %></p><br>
+  </div>
+
+  <div class="dividerComment"></div>
 
 <% if current_user %>
-  <h1><%= "Welcome #{current_user.name}" %></h1>
 
-  <h5><%= link_to "Sign out", "/signout" %></h5> <br>
-<!--   <h5><a href ="users/<%=current_user.id%>/edit">Edit</a></h5>
- -->
-  <br>
+  <div class="optionsBottom">
+    <% if @user['fullname'] == current_user.fullname %>
 
-<!--   <h5><a href ="/users">Show All</a></h5><br>
- -->
+      <%= link_to "Sign Out", "/signout" %> <br>
+    <% end %>
+  </div>
 
-
-<!-- if current user, then can edit / add things to database -->
-
-
-<% else %>
-  <h1><%= link_to "Sign in with Twitter", "/auth/twitter" %></h1>
 <% end %>
 
 </div>
