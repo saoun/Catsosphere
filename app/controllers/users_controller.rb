@@ -23,4 +23,9 @@ class UsersController < ApplicationController
     @user.update(user_params)
     redirect_to(:user)
   end
+
+  private
+    def user_params
+    params.require(:user).permit(:name, :fullname, :contact, :bio)
+  end
 end

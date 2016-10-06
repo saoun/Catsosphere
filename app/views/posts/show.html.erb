@@ -1,5 +1,7 @@
 <%= render "navbar" %>
 
+<div class="viewPost">
+
 <%= link_to "&larr; Back".html_safe, posts_path %>
 <article>
   <h2><%= @post.title %></h2>
@@ -23,3 +25,4 @@
   <% end %>
   </div>
 </article>
+</div>
