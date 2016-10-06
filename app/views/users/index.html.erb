@@ -1,3 +1,8 @@
+<%= render "posts/navbar" %>
+
+<div class="users">
+
+
 <% if current_user %>
   <%= "Welcome #{current_user.name}" %> <br>
 
@@ -12,3 +17,5 @@
     <p>Bio:  <%= user['bio'] %></p></br>
     <hr>
   <% end %>
+
+</div>
