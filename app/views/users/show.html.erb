@@ -2,14 +2,13 @@
 
 <div class="profile">
 
-
 <% if current_user %>
   <% if @user['fullname'] == current_user.fullname %>
 
    <% if current_user.fullname == "" %>
-      <h3><%= "Hi There!" %></h3>
+      <h1 class="welcome"><%= "Hi There!" %></h1>
     <%else%>
-      <h3><%= "Hi, #{current_user.fullname}" %></h3>
+      <h1 class="welcome"><%= "Hi, #{current_user.fullname}" %></h1>
     <%end%>
 
     <div>
@@ -19,30 +18,30 @@
   <%end%>
 
     <% if @user['fullname'] != current_user.fullname %>
-      <h3><%= @user['fullname'] %></h3>
+      <h1><%= @user['fullname'] %></h1>
     <% end %>
 
   <%else%>
-  <h3><%= @user['fullname'] %></h3>
+  <h1><%= @user['fullname'] %></h1>
 
   <% end %>
 
-  <hr>
+  <div class="dividerComment"></div>
 
   <div class="optionsMiddle">
-    Full Name: <p><%= @user['fullname'] %></p><br>
-    Bio: <p><%= @user['bio'] %></p><br>
-    Contact: <p><%= @user['contact'] %></p><br>
+    <strong>Full Name: </strong><p><%= @user['fullname'] %></p><br>
+    <strong>Bio:</strong> <p><%= @user['bio'] %></p><br>
+    <strong>Contact:</strong> <p><%= @user['contact'] %></p><br>
   </div>
 
-  <hr>
+  <div class="dividerComment"></div>
 
 <% if current_user %>
 
   <div class="optionsBottom">
     <% if @user['fullname'] == current_user.fullname %>
-      <h6><%= link_to "Delete Account", current_user, method: :delete %></h6> <br>
-      <h6><%= link_to "Sign Out", "/signout" %></h6> <br>
+
+      <%= link_to "Sign Out", "/signout" %> <br>
     <% end %>
   </div>
 

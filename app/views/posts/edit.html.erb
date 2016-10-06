@@ -1,4 +1,7 @@
 <%= render "navbar" %>
 
-<h2>Edit Post</h2>
-<%= render "form" %>
+<div class="newPost">
+  <%= link_to "&larr; Back".html_safe, post_path %>
+  <h2>Edit Post</h2>
+  <%= render "form" %>
+</div>

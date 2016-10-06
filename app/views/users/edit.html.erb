@@ -1,6 +1,6 @@
 <%= render "posts/navbar" %>
 
-<div class="container">
+<div class="newComment">
 
   <% if current_user %>
     <% if current_user.fullname == "" %>
@@ -12,17 +12,17 @@
       <h5><a href ="/users/<%=current_user.id%>">Back</a></h5>
     </div>
 
-    <hr>
+    <div class="dividerComment"></div>
 
     <div class="formDiv">
       <%= render "form" %>
     </div>
 
-    <hr>
+    <div class="dividerComment"></div>
 
     <div class="optionsBottom">
-      <h6><%= link_to "Delete Account", current_user, method: :delete %></h6> <br>
-      <h6><%= link_to "Sign Out", "/signout" %></h6> <br>
+
+      <%= link_to "Sign Out", "/signout" %> <br>
     </div>
 
 
