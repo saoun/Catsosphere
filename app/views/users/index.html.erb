@@ -4,3 +4,11 @@
 <% else %>
   <%= link_to "Sign in with Twitter", "/auth/twitter" %>
 <% end %>
+
+
+<% @users.each do |user| %>
+    <a href="users/<%=user['id']%>"><%= user['fullname']%></a><br>
+    <p>Contact: <%= user['contact'] %></p></br>
+    <p>Bio:  <%= user['bio'] %></p></br>
+    <hr>
+  <% end %>
