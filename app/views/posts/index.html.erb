@@ -6,8 +6,9 @@
   <% @posts.each do |post| %>
     <article>
       <h2 class="postTitle"><%= link_to post.title, post_path(post) %></h2>
-      <time>Created at <%= post.created_at %></time>
-      <p><%= post.content %></p>
+      <time>Created at <%= post.created_at %></time> | <%= post.comments.count %> Comments
+      <p><%= truncate post.content, length: 160 %></p>
+      <%= link_to 'Read More', post %>
     </article>
     <div class="divider"></div>
   <% end %>
