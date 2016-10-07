@@ -2,8 +2,12 @@
 
 
 <div class="newComment">
-<%= link_to "&larr; Back".html_safe, posts_path %>
-  <h2>New Comment</h2>
-  <%= render "form" %>
+  <%= link_to "&larr; Back".html_safe, posts_path %>
+  <% if current_user %>
+    <h2>New Comment</h2>
+    <%= render "form" %>
+  <%else%>
+    <h2><a href="/auth/twitter">Sign in</a> or <a href="/auth/twitter">sign up</a> to create a new post!</h2>
+  <%end%>
 
 </div>

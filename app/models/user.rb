@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   def self.create_with_omniauth(auth)
     create! do |user|
