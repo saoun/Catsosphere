@@ -1,5 +1,7 @@
 <%= render "navbar" %>
+
 <div class="newPost">
+<%= link_to "&larr; Back".html_safe, posts_path %>
   <% if current_user %>
     <h2>New Post</h2>
     <%= render "form" %>
