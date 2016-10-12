@@ -21,11 +21,12 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
+    byebug
     redirect_to(:user)
   end
 
   private
     def user_params
-    params.require(:user).permit(:name, :fullname, :contact, :bio)
+    params[:user].permit(:name, :fullname, :contact, :bio)
   end
 end

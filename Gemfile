@@ -39,7 +39,7 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'pry'
 gem 'emoji'
-
+gem 'devise'
 
 
 group :development, :test do
