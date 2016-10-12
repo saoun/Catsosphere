@@ -10,11 +10,11 @@
       <li><a href="/users">ALL USERS</a></li>
       <% if user_signed_in? %>
       <li><a class="menu" href="/users/<%=current_user.id%>">PROFILE</a></li>
-      <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %></li>
         <% else %>
       <li><%= link_to "SIGN UP", new_user_registration_path %></li>
       <li><%= link_to "SIGN IN", new_user_session_path %></li>
-      <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+
         <% end %>
 
     </ul>

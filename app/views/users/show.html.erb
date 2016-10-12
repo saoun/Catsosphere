@@ -41,7 +41,7 @@
   <div class="optionsBottom">
     <% if @user['fullname'] == current_user.fullname %>
 
-      <%= link_to "Sign Out", "/signout" %> <br>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> <br>
     <% end %>
   </div>
 
