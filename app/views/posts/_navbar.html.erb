@@ -8,10 +8,13 @@
       <li><a href="/">ALL POSTS</a></li>
       <li><a href="/posts/new">NEW POST</a></li>
       <li><a href="/users">ALL USERS</a></li>
-      <% if current_user %>
+      <% if user_signed_in? %>
       <li><a class="menu" href="/users/<%=current_user.id%>">PROFILE</a></li>
+      <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
         <% else %>
-      <li><a class="menu" href="/auth/twitter">SIGN IN</a></li>
+      <li><%= link_to "SIGN UP", new_user_registration_path %></li>
+      <li><%= link_to "SIGN IN", new_user_session_path %></li>
+      <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
         <% end %>
 
     </ul>
