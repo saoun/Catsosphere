@@ -8,7 +8,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   #     :image_size => 50
   #   }
 
-  provider :twitter, ENV["TWITTER_CLIENT_ID"], ENV['TWITTER_CLIENT_SECRET']
+  # provider :twitter, ENV["TWITTER_CLIENT_ID"], ENV['TWITTER_CLIENT_SECRET']
 
   # provider :github, ENV["GITHUB_CLIENT_ID"], ENV["GITHUB_CLIENT_SECRET"]
 end

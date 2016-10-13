@@ -40,7 +40,8 @@ gem 'omniauth-github'
 gem 'pry'
 gem 'emoji'
 gem 'rails_emoji_picker'
-
+gem 'devise'
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development, :test do

@@ -7,22 +7,33 @@
   <article>
 
     <h2 class="postTitle"><%= @post.title %></h2>
-    <h5 class="caption">By <a href="users/<%=@post.user['id']%>"><%= @post.user.fullname %></a> | Posted on <%= @post.created_at.to_date %></h5>
+    <% if @post.user.fullname == "" %>
+      <h5 class="caption">By <a href="/users/<%=@post.user['id']%>"><%= @post.user.name %></a> | Posted on <%= @post.created_at.to_date %></h5>
+    <%else%>
+      <h5 class="caption">By <a href="/users/<%=@post.user['id']%>"><%= @post.user.fullname %></a> | Posted on <%= @post.created_at.to_date %></h5>
+    <%end%>
     <p class="postPreview"><%= @post.content %></p><br>
       <% if current_user%>
         <%= link_to "Edit", edit_post_path(@post) %> |
         <%= link_to "Delete", post_path(@post), method: :delete %>
       <%end%>
+
     <div class="dividerComment"></div>
+
     <h2><%= @post.comments.count %> Replies</h2>
       <%= link_to "Add new comment", new_post_comment_path(@post) %>
-
       <% @post.comments.each do |comment| %>
         <div class="commentBox">
           <p class="comments"><%= comment.content %></p>
-          <h5 class="caption">Created <%= comment.created_at.to_date %></h5>
-          <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
-          <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
+          <% if comment.user.fullname == "" %>
+            <h5 class="caption">By <a href="/users/<%=comment.user['id']%>"><%= comment.user.name %></a> | Created <%= comment.created_at.to_date %></h5>
+          <%else%>
+          <h5 class="caption">By <a href="/users/<%=comment.user['id']%>"><%= comment.user.fullname %></a> | Created <%= comment.created_at.to_date %></h5>
+          <%end%>
+          <% if current_user%>
+            <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
+            <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
+          <%end%>
         </div>
 
        <% end %>

@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Catsosphere: basic CRUD app / blog with Twitter oAuth
 
-Things you may want to cover:
+## Code
 
-* Ruby version
+Ruby on Rails, HTML, CSS
 
-* System dependencies
+## Configuration & Dependencies
+Clone the repo <br>
+Run:<br>
+``bundle install``<br>
+``rails db:create``<br>
+``rails db:seed``<br>
+``rails db:migrate``<br>
+``rails s``<br>
+Server up and running!
 
-* Configuration
+## Ruby Version
+Rails 4
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## How it works
+Users can sign up and create a profile<br>
+Users can add posts and comments <br>
+Users can view the profile of other users
