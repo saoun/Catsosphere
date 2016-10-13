@@ -1,7 +1,9 @@
+<p class="emoji-picker-container">
 <%= form_for @post do |f| %>
   <%= f.label :title %><br>
-  <%= f.text_field :title %><br>
+  <%= f.text_field :title, class: 'form-control', data: {emojiable: true} %><br>
   <%= f.label :content %><br>
   <%= f.text_area :content %><br>
   <%= f.submit %>
 <% end %>
+</p>
