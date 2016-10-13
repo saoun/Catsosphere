@@ -7,21 +7,81 @@
   margin-top: 100px;
 }
 
+.newPost h2 {
+  font-weight: 300;
+}
+
+.newPost a {
+  color: #f3554c;
+}
+
+.newPosts a:hover {
+  color: #ad3b34;
+}
+
 .viewAllPosts {
-  margin-left: 60px;
-  margin-top: 100px;
+  text-align: center;
+  max-width: 800px;
+  margin: 100px auto;
+}
+
+.viewAllPosts a {
+  color: #f3554c;
+}
+
+.viewAllPosts a:hover {
+  color: #ad3b34;
+}
+
+.viewPost a {
+  color: #f3554c;
+}
+
+.viewPost a:hover {
+  color: #ad3b34;
+}
+
+.caption {
+  font-size: 13px;
+  font-weight: 300;
+  font-style: italic;
+  color: #b5b5b5;
+  margin-top: 1px;
+}
+
+.postTitle {
+  font-size: 40px;
+  color: #2e373d;
+  font-weight: 400;
+  margin-bottom: 1px;
+}
+
+.postTitle a {
+  color: #2e373d;
+}
+
+.postTitle a:hover {
+  color: #f3554c;
 }
 
 .viewPost {
   margin-left: 60px;
-  margin-top: 100px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  line-height: 30px;
+  max-width: 800px;
 }
 
-hr {
-  margin-right: 60px;
+.divider {
+  margin: 30px 120px 0 120px;
+  background-color: #e0dfdf;
+  height: 1px;
 }
 
-time {
-  font-size: 13px;
-  font-style: italic;
+.postPreview {
+  line-height: 30px;
+  font-weight: 300;
 }
+
+
+

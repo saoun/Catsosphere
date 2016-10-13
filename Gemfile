@@ -39,6 +39,9 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'pry'
 gem 'paperclip'
+gem 'emoji'
+gem 'rails_emoji_picker'
+gem 'devise'
 gem 'aws-sdk', '~> 2.3'
 
 

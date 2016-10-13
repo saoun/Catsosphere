@@ -1,14 +1,18 @@
-<% if current_user %>
-  <%= "Welcome #{current_user.name}" %> <br>
+<%= render "posts/navbar" %>
 
-<% else %>
-  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
-<% end %>
+<div class="profile">
 
+
+<h1> View Users </h1>
+<div class="dividerComment"></div>
 
 <% @users.each do |user| %>
+    <div class="optionsMiddle">
     <a href="users/<%=user['id']%>"><%= user['fullname']%></a><br>
-    <p>Contact: <%= user['contact'] %></p></br>
-    <p>Bio:  <%= user['bio'] %></p></br>
-    <hr>
+    <strong>Contact: </strong><p> <%= user['contact'] %></p></br>
+    <strong>Bio: </strong><p> <%= user['bio'] %></p></br>
+    <div class="dividerComment"></div>
+    </div>
   <% end %>
+
+</div>

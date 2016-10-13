@@ -1,17 +1,20 @@
 <header id="header">
 
-  <h3 id="logo"><a href="/">MY BLOG</a></h3>
+  <h3 id="logo"><a href="/">CATSOSPHERE</a></h3>
 
   <nav>
     <a href="#" id="menu-icon"></a>
     <ul class="navUL">
       <li><a href="/">ALL POSTS</a></li>
       <li><a href="/posts/new">NEW POST</a></li>
-
-      <% if current_user %>
+      <li><a href="/users">ALL USERS</a></li>
+      <% if user_signed_in? %>
       <li><a class="menu" href="/users/<%=current_user.id%>">PROFILE</a></li>
+      <li><%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %></li>
         <% else %>
-      <li><a class="menu" href="/auth/twitter">SIGN IN</a></li>
+      <li><%= link_to "SIGN UP", new_user_registration_path %></li>
+      <li><%= link_to "SIGN IN", new_user_session_path %></li>
+
         <% end %>
 
     </ul>
