@@ -38,7 +38,8 @@ gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'pry'
-
+gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development, :test do
