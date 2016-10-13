@@ -40,6 +40,7 @@ gem 'omniauth-github'
 gem 'pry'
 gem 'emoji'
 gem 'devise'
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development, :test do
