@@ -1,0 +1,20 @@
+<li>
+  <%= comment.content %> -
+  <small>Submitted <%= time_ago_in_words(comment.created_at) %> ago</small>
+
+  <% if current_user.id == comment.user_id %>
+
+            <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
+            <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
+          <%end%>
+
+  <%= form_for [comment, Comment.new] do |f| %>
+      <%= f.text_area :content, placeholder: "Add a Reply" %><br/>
+      <%= f.submit "Reply"  %>
+      <% end %>
+
+  <ul>
+      <%= render partial: 'comments/comment', collection: comment.comments %>
+  </ul>
+
+</li>

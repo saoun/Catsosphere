@@ -19,26 +19,16 @@
         <%= link_to "Delete", post_path(@post), method: :delete %>
       <%end%>
 
-    <div class="dividerComment"></div>
+    <h3>Comments</h3>
 
-    <h2><%= @post.comments.count %> Replies</h2>
-      <%= link_to "Add new comment", new_post_comment_path(@post) %>
-      <% @post.comments.each do |comment| %>
-        <div class="commentBox">
-          <p class="comments"><%= comment.content %></p>
-          <% if comment.user.fullname == "" %>
-            <h5 class="caption">By <a href="/users/<%=comment.user['id']%>"><%= comment.user.name %></a> | Created <%= comment.created_at.to_date %></h5>
-          <%else%>
-          <h5 class="caption">By <a href="/users/<%=comment.user['id']%>"><%= comment.user.fullname %></a> | Created <%= comment.created_at.to_date %></h5>
-          <%end%>
-          <% if current_user%>
-            <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
-            <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
-          <%end%>
-        </div>
+<%= form_for [@post, Comment.new] do |f| %>
+<%= f.text_area :content, placeholder: "Add a comment" %><br/>
+<%= f.submit "Add Comment" %>
+<% end %>
 
-       <% end %>
-    </div>
+<ul>
+  <%= render(partial: 'comments/comment', collection: @post.comments) %>
+</ul>
 
   </article>
 </div>
