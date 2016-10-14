@@ -8,7 +8,7 @@ def index
 
 def create
   data = params
-  byebug
+
   if Conversation.between(current_user.id,params[:recipient_id])
    .present?
     @conversation = Conversation.between(current_user.id,
