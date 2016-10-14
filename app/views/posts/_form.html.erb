@@ -1,7 +1,14 @@
+
 <%= form_for @post do |f| %>
   <%= f.label :title %><br>
-  <%= f.text_field :title %><br>
+  <div class="emoji-picker-container">
+  <%= f.text_field :title, class: 'form-control', data: {emojiable: true} %><br>
+  </div><br>
   <%= f.label :content %><br>
-  <%= f.text_area :content %><br>
+  <div class="emoji-picker-container">
+  <%= f.text_area :content, class: 'form-control', data: {emojiable: true} %><br>
+  </div><br>
+  <%= f.file_field :image_upload %><br>
   <%= f.submit %>
 <% end %>
+

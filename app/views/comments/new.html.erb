@@ -1,13 +1,13 @@
 <%= render "posts/navbar" %>
 
 
-<div class="newComment">
+<div class="newPost">
   <%= link_to "&larr; Back".html_safe, posts_path %>
   <% if current_user %>
     <h2>New Comment</h2>
     <%= render "form" %>
   <%else%>
-    <h2><a href="/auth/twitter">Sign in</a> or <a href="/auth/twitter">sign up</a> to create a new post!</h2>
+    <h2><%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %> to create a new comment!</h2>
   <%end%>
 
 </div>
