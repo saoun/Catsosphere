@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
-  has_many :comments, dependent: :destroy
+
+  has_many :comments, dependent: :destroy, as: :commentable
   belongs_to :user
 
   # This method associates the attribute ":avatar" with a file attachment
