@@ -1,30 +1,29 @@
 class ConversationsController < ApplicationController
   # before_action :authenticate_user
 
-def index
-  @users = User.all
-  @conversations = Conversation.all
- end
+  def index
+    @users = User.all
+    @conversations = Conversation.all
+  end
 
-def create
-  data = params
+  def create
+    data = params
 
-  if Conversation.between(current_user.id,params[:recipient_id])
-   .present?
-    @conversation = Conversation.between(current_user.id,
-     params[:recipient_id]).first
+    if Conversation.between(current_user.id,params[:recipient_id])
+      .present?
+      @conversation = Conversation.between(current_user.id,
+      params[:recipient_id]).first
+    else
+      @conversation = Conversation.create!(conversation_params(data))
+    end
 
- else
-    @conversation = Conversation.create!(conversation_params(data))
- end
-
-  redirect_to conversation_messages_path(@conversation)
-end
+    redirect_to conversation_messages_path(@conversation)
+  end
 
 
 private
-  def conversation_params data
 
+  def conversation_params data
     params = ActionController::Parameters.new({
       conversation: {
         sender_id: current_user.id,
