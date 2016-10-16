@@ -2,6 +2,48 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.center a {
+  color: #f3554c;
+}
+
+.center a:hover {
+  color: #ad3b34;
+}
+
+.center h6 {
+  font-style: italic;
+   color: #b5b5b5;
+}
+
+.center h3 a {
+  color: #2e373d;
+}
+
+.center h3 a:hover {
+  color: #f3554c;
+  text-decoration: none;
+}
+
+.center p {
+  color: #333;
+}
+
+.divider {
+  margin: 30px 200px 0 200px;
+  background-color: #e0dfdf;
+  height: 1px;
+}
+
+
+
+
+
 // .newPost {
 //   margin-left: 60px;
 //   margin-top: 100px;
@@ -72,11 +114,7 @@
 //   max-width: 800px;
 // }
 
-// .divider {
-//   margin: 30px 120px 0 120px;
-//   background-color: #e0dfdf;
-//   height: 1px;
-// }
+
 
 // .postPreview {
 //   line-height: 30px;

@@ -2,16 +2,16 @@
 
 
 
-<div class="viewAllPosts">
+<div class="container center">
   <% @posts.each do |post| %>
     <article>
-      <h2 class="postTitle"><%= link_to post.title, post_path(post) %></h2>
+      <h3><%= link_to post.title, post_path(post) %></h3>
       <% if post.user.fullname == "" %>
-        <h5 class="caption">By <a href="users/<%=post.user['id']%>"><%= post.user.name %></a> | Posted on <%= post.created_at.to_date %> | Comments: <%= post.comments.count %> </h5>
+        <h6>By <a href="users/<%=post.user['id']%>"><%= post.user.email %></a> | Posted on <%= post.created_at.to_date %> | Comments: <%= post.comments.count %> </h6>
       <%else%>
-        <h5 class="caption">By <a href="users/<%=post.user['id']%>"><%= post.user.fullname %></a> | Posted on <%= post.created_at.to_date %> | Comments: <%= post.comments.count %> </h5>
+        <h6>By <a href="users/<%=post.user['id']%>"><%= post.user.fullname %></a> | Posted on <%= post.created_at.to_date %> | Comments: <%= post.comments.count %> </h6>
       <%end%>
-      <p class="postPreview"><%= truncate post.content, length: 300 %></p><br>
+      <p class="lead"><%= truncate post.content, length: 300 %></p>
       <%= link_to 'Read More', post %>
     </article>
     <div class="divider"></div>
