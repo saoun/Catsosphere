@@ -1,87 +1,125 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// // Place all the styles related to the posts controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.newPost {
-  margin-left: 60px;
-  margin-top: 100px;
-}
 
-.newPost h2 {
-  font-weight: 300;
-}
-
-.newPost a {
-  color: #f3554c;
-}
-
-.newPosts a:hover {
-  color: #ad3b34;
-}
-
-.viewAllPosts {
+.center {
   text-align: center;
-  max-width: 800px;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 
-.viewAllPosts a {
+.center a {
   color: #f3554c;
 }
 
-.viewAllPosts a:hover {
+.center a:hover {
   color: #ad3b34;
 }
 
-.viewPost a {
-  color: #f3554c;
-}
-
-.viewPost a:hover {
-  color: #ad3b34;
-}
-
-.caption {
-  font-size: 13px;
-  font-weight: 300;
+.center h6 {
   font-style: italic;
-  color: #b5b5b5;
-  margin-top: 1px;
+   color: #b5b5b5;
 }
 
-.postTitle {
-  font-size: 40px;
-  color: #2e373d;
-  font-weight: 400;
-  margin-bottom: 1px;
-}
-
-.postTitle a {
+.center h3 a {
   color: #2e373d;
 }
 
-.postTitle a:hover {
+.center h3 a:hover {
   color: #f3554c;
+  text-decoration: none;
 }
 
-.viewPost {
-  margin-left: 60px;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  line-height: 30px;
-  max-width: 800px;
+.center p {
+  color: #333;
 }
 
 .divider {
-  margin: 30px 120px 0 120px;
+  margin: 30px 200px 0 200px;
   background-color: #e0dfdf;
   height: 1px;
 }
 
-.postPreview {
-  line-height: 30px;
-  font-weight: 300;
-}
+
+
+
+
+// .newPost {
+//   margin-left: 60px;
+//   margin-top: 100px;
+// }
+
+// .newPost h2 {
+//   font-weight: 300;
+// }
+
+// .newPost a {
+//   color: #f3554c;
+// }
+
+// .newPosts a:hover {
+//   color: #ad3b34;
+// }
+
+// .viewAllPosts {
+//   text-align: center;
+//   max-width: 800px;
+//   margin: 100px auto;
+// }
+
+// .viewAllPosts a {
+//   color: #f3554c;
+// }
+
+// .viewAllPosts a:hover {
+//   color: #ad3b34;
+// }
+
+// .viewPost a {
+//   color: #f3554c;
+// }
+
+// .viewPost a:hover {
+//   color: #ad3b34;
+// }
+
+// .caption {
+//   font-size: 13px;
+//   font-weight: 300;
+//   font-style: italic;
+//   color: #b5b5b5;
+//   margin-top: 1px;
+// }
+
+// .postTitle {
+//   font-size: 40px;
+//   color: #2e373d;
+//   font-weight: 400;
+//   margin-bottom: 1px;
+// }
+
+// .postTitle a {
+//   color: #2e373d;
+// }
+
+// .postTitle a:hover {
+//   color: #f3554c;
+// }
+
+// .viewPost {
+//   margin-left: 60px;
+//   margin-top: 60px;
+//   margin-bottom: 60px;
+//   line-height: 30px;
+//   max-width: 800px;
+// }
+
+
+
+// .postPreview {
+//   line-height: 30px;
+//   font-weight: 300;
+// }
 
 
 

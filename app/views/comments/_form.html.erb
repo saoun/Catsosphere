@@ -1,4 +1,6 @@
 <%= form_for [@post, @comment] do |f| %>
-  <%= f.text_area :content %><br>
+  <div class="emoji-picker-container">
+  <%= f.text_area :content, class: 'form-control', data: {emojiable: true} %><br>
+  </div><br>
   <%= f.submit %>
 <% end %>
