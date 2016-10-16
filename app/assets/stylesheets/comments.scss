@@ -13,12 +13,19 @@
 //   margin-bottom: 20px;
 // }
 
-// .commentBox {
-//   border: 1px solid #e0dfdf;
-//   padding: 0 20px 20px 20px;
-//   margin-bottom: 10px;
-//   margin-top: 20px;
-// }
+.commentBox {
+  border: 1px solid #e0dfdf;
+  padding: 10px 20px 20px 20px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 500px;
+}
+
+
+.commentBox h6 {
+  font-style: italic;
+   color: #b5b5b5;
+}
 
 // .comments {
 //   margin-bottom: -1px;
