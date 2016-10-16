@@ -1,6 +1,6 @@
 <%= render "posts/navbar" %>
 
-<div class="profile">
+<div class="container">
 
 <% if current_user %>
   <% if @user['fullname'] == current_user.fullname %>
@@ -29,9 +29,9 @@
   <div class="dividerComment"></div>
 
   <div class="optionsMiddle">
-    <strong>Full Name: </strong><p><%= @user['fullname'] %></p><br>
-    <strong>Bio:</strong> <p><%= @user['bio'] %></p><br>
-    <strong>Contact:</strong> <p><%= @user['contact'] %></p><br>
+    <strong>Full Name: </strong><p><%= @user['fullname'] %></p>
+    <strong>Bio:</strong> <p><%= @user['bio'] %></p>
+    <strong>Contact:</strong> <p><%= @user['email'] %></p>
     <%= image_tag @user.avatar.url(:medium) %>
   </div>
 
@@ -42,7 +42,7 @@
   <div class="optionsBottom">
     <% if @user['fullname'] == current_user.fullname %>
 
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> <br>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
     <% end %>
   </div>
 
