@@ -39,8 +39,9 @@
     <%else%>
       <h6><%= link_to 'Message user!', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post'%></h6><br>
     <%end%>
-    <%= image_tag @user.avatar.url(:medium) %>
-
+    <% if @user.avatar? %>
+      <%= image_tag @user.avatar.url(:medium) %>
+    <%end%>
 
   <div class="divider"></div>
 

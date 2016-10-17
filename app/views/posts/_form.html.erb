@@ -8,6 +8,7 @@
   <div class="emoji-picker-container">
     <%= f.text_area :content, class: 'form-control', data: {emojiable: true} %><br>
   </div><br>
+  <%= f.label :Add_image %><br>
   <%= f.file_field :image_upload %><br>
   <%= f.submit "Create Post", :class => "btn btn-default" %>
 <% end %>
