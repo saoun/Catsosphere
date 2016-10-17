@@ -22,7 +22,7 @@
 
       <% if current_user %>
         <% if current_user.id == @post.user_id %>
-          <%= link_to "Edit", edit_post_path(@post) unless @post.created_at < 1.hour.ago %> |
+          <%= link_to "Edit | ", edit_post_path(@post) unless @post.created_at < 1.hour.ago %>
           <%= link_to "Delete", post_path(@post), method: :delete %>
         <%end%>
       <%end%>
