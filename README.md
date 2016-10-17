@@ -26,9 +26,9 @@ Users can view the profile of other users <br>
 Users can message each other <br>
 
 ## Additional Features
-AWS S3 integration for image and avatar uploads
-Devise authentication
-Emoji keyboard
-Threaded Replies
-Post editing time limit to 1 hour
+AWS S3 integration for image and avatar uploads<br>
+Devise authentication<br>
+Emoji keyboard<br>
+Threaded Replies<br>
+Post editing time limit to 1 hour<br>
 Bootstrap
