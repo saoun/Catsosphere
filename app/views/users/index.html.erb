@@ -3,16 +3,14 @@
 <div class="container">
 
 
-<h1> View Users </h1>
-<div class="dividerComment"></div>
+<h2> View Users </h2>
 
 <% @users.each do |user| %>
-    <div class="optionsMiddle">
-    <a href="users/<%=user['id']%>"><%= user['fullname']%></a>
-    <strong>Contact: </strong><p> <%= user['contact'] %></p>
-    <strong>Bio: </strong><p> <%= user['bio'] %></p>
-    <div class="dividerComment"></div>
-    </div>
-  <% end %>
+  <div class="user">
+    <h6>Name: </h6><a href="users/<%=user['id']%>"><%= user['fullname']%></a><br>
+    <h6>Contact: </h6> <%= user['email'] %><br>
+    <h6>Bio: </h6> <%= user['bio'] %><br>
+    <div class="divider"></div>
+  </div>
+<% end %>
 
-</div>
