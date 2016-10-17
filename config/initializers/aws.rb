@@ -1,5 +1,5 @@
 Aws.config.update({
-  region: 'us-east-1',
+  region: ENV.fetch('AWS_REGION'),
   credentials: Aws::Credentials.new(ENV['AWS_CLIENT_ID'], ENV['AWS_CLIENT_SECRET']),
 })
 
