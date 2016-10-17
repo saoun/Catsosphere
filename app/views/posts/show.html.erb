@@ -28,7 +28,9 @@
     <h4><%= @post.comments.count %> Replies</h4>
 
     <%= form_for [@post, Comment.new] do |f| %>
-      <%= f.text_area :content, placeholder: "Add a comment" %><br>
+      <div class="emoji-picker-container">
+        <%= f.text_area :content, placeholder: "Add a comment", class: 'form-control', data: {emojiable: true} %>
+      </div><br>
       <%= f.submit "Add Comment", :class => "btn btn-default" %><br>
     <% end %>
 
