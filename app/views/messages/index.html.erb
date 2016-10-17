@@ -13,9 +13,13 @@
       <% user = User.find(message.user_id) %>
 
       <% if current_user.id == message.user_id %>
-        <h5 class="current"><%= user.fullname %></h5>
+        <h5 class="current">Me: </h5>
       <%else%>
-        <h5><%= user.fullname %></h5>
+        <%if user.fullname = "" || user.fullname = nil %>
+          <h5><%= user.email %></h5>
+        <%else%>
+          <h5><%= user.fullname %></h5>
+        <%end%>
       <%end%>
 
       <h6>Sent <%= message.message_time %></h6>

@@ -2,7 +2,8 @@
 <%= form_tag("/conversations", method: "post") do %>
 
   <h6><%= label_tag(:recipient_id, "Choose a user") %></h6>
-  <%= select_tag(:recipient_id, options_from_collection_for_select(User.where.not(id: current_user.id), 'id', 'fullname'), {class: 'form-control'}) %><br>
+
+  <%= select_tag(:recipient_id, options_from_collection_for_select(User.where.not(id: current_user.id), 'id', 'email'), {class: 'form-control'}) %><br>
   <%= submit_tag "Message User", :class => "btn btn-default" %>
 
 <% end %>
