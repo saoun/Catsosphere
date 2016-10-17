@@ -2,7 +2,7 @@
 
 <div class="container">
 
-  <h3>Inbox</h3>
+  <h3>Inbox: <%=@conversations.count%></h3>
 
   <% @conversations.each do |conversation| %>
     <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
@@ -12,9 +12,11 @@
         <% recipient = User.find(conversation.sender_id) %>
       <% end %>
 
-      <%= link_to recipient.fullname, conversation_messages_path(conversation)%>
+      <h5><%= link_to recipient.fullname, conversation_messages_path(conversation)%></h5>
     <% end %>
   <% end %>
+
+  <div class="divider"></div>
 
   <h3>All Users</h3>
 
