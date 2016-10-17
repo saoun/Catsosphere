@@ -6,7 +6,7 @@
 
   <% if current_user %>
 
-  <h3>Inbox: <%=@conversations.count%></h3>
+  <h3>Inbox:</h3>
 
   <% @conversations.each do |conversation| %>
     <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>

@@ -30,24 +30,24 @@
 
   <div class="divider"></div>
 
-  <div>
+
     <h6>Full Name: </h6> <%= @user['fullname'] %><br>
     <h6>Bio:</h6> <%= @user['bio'] %><br>
     <h6>Contact:</h6> <%= @user['email'] %><br>
-    <% if current_user %>
-      <h6><%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post'%></h6><br>
+    <% if @user['fullname'] == current_user.fullname %>
+      <h6><%= link_to 'Check your inbox', conversations_path %></h6><br>
+    <%else%>
+      <h6><%= link_to 'Message user!', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post'%></h6><br>
     <%end%>
     <%= image_tag @user.avatar.url(:medium) %>
-  </div>
+
 
   <div class="divider"></div>
 
   <% if current_user %>
-    <div>
-      <% if @user['fullname'] == current_user.fullname %>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-      <% end %>
-    </div>
+    <% if @user['fullname'] == current_user.fullname %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <% end %>
   <% end %>
 
 </div>
