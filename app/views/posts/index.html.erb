@@ -4,7 +4,7 @@
   <% @posts.each do |post| %>
     <article>
       <h3><%= link_to post.title, post_path(post) %></h3>
-      <% if post.user.fullname == nil %>
+      <% if post.user.fullname == nil || post.user.fullname == "" %>
         <h6>By <a href="users/<%=post.user['id']%>"><%= post.user.email %></a> | Posted on <%= post.created_at.to_date %> | Comments: <%= post.comments.count %> </h6>
       <%else%>
         <h6>By <a href="users/<%=post.user['id']%>"><%= post.user.fullname %></a> | Posted on <%= post.created_at.to_date %> | Comments: <%= post.comments.count %> </h6>
