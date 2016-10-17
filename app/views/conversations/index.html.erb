@@ -23,19 +23,12 @@
   <div class="divider"></div>
 
   <h3>All Users</h3>
-<!--
-    <% @users.each do |user| %>
-      <% if user.id != current_user.id %>
-        <%= user.fullname %> <%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
-      <% end %>
-    <% end %> -->
+
 
   <%=render 'form'%>
 
   <%else%>
-
     <h3><%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %> to create send messages!</h3>
-
   <%end%>
 
 

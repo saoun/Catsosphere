@@ -25,10 +25,10 @@
   <% end %>
 
   <%= form_for [@conversation, @message] do |f| %>
-    <div class="field">
-      <%= f.text_area :body, class: "form-control" %>
+    <div class="field emoji-picker-container">
+      <%= f.text_area :body, class: "form-control", data: {emojiable: true} %>
     </div>
-    <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+    <%= f.text_field :user_id, value: current_user.id, type: "hidden" %><br>
     <%= f.submit "Add Reply", :class => "btn btn-default" %>
   <% end %>
 

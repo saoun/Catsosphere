@@ -1,12 +1,16 @@
 <%= render "navbar" %>
 
 <div class="container post">
+  <%= link_to "&larr; Back".html_safe, post_path %>
   <% if current_user %>
-    <%= link_to "&larr; Back".html_safe, post_path %>
-    <h2>Edit Post</h2>
-    <%= render "form" %>
+    <% if @post.created_at < 1.hour.ago %>
+      <h3>Sorry, you've exceeded the time limit for editing!</h3>
+    <%else%>
+      <h2>Edit Post</h2>
+      <%= render "form" %>
+    <%end%>
+
   <%else%>
-    <%= link_to "&larr; Back".html_safe, post_path %>
     <h2>Only the author of this post can edit it.</h2>
   <%end%>
 </div>
