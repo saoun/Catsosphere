@@ -1,6 +1,6 @@
 <%= render "posts/navbar" %>
 
-<div class="newPost">
+<div class="container">
 <%= link_to "&larr; Back".html_safe, posts_path %>
 
 <h2>Sign up</h2>
@@ -27,7 +27,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", :class => "btn btn-default" %>
   </div>
 <% end %>
 

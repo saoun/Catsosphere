@@ -1,14 +1,16 @@
 <%= render "posts/navbar" %>
 
-<div class="container">
+<div class="container user">
+
+<%= link_to "&larr; Back".html_safe, users_path %>
 
 <% if current_user %>
   <% if @user['fullname'] == current_user.fullname %>
 
    <% if current_user.fullname == "" %>
-      <h1 class="welcome"><%= "Hi There!" %></h1>
+      <h3><%= "Hi There!" %></h3>
     <%else%>
-      <h1 class="welcome"><%= "Hi, #{current_user.fullname}" %></h1>
+      <h3><%= "Hi, #{current_user.fullname}" %></h3>
     <%end%>
 
     <div>
@@ -18,34 +20,31 @@
   <%end%>
 
     <% if @user['fullname'] != current_user.fullname %>
-      <h1><%= @user['fullname'] %></h1>
+      <h3><%= @user['fullname'] %></h3>
     <% end %>
 
   <%else%>
-  <h1><%= @user['fullname'] %></h1>
+    <h3><%= @user['fullname'] %></h3>
 
   <% end %>
 
-  <div class="dividerComment"></div>
+  <div class="divider"></div>
 
-  <div class="optionsMiddle">
-    <strong>Full Name: </strong><p><%= @user['fullname'] %></p>
-    <strong>Bio:</strong> <p><%= @user['bio'] %></p>
-    <strong>Contact:</strong> <p><%= @user['email'] %></p>
+  <div>
+    <h6>Full Name: </h6><%= @user['fullname'] %><br>
+    <h6>Bio:</h6> <%= @user['bio'] %><br>
+    <h6>Contact:</h6> <%= @user['email'] %><br>
     <%= image_tag @user.avatar.url(:medium) %>
   </div>
 
-  <div class="dividerComment"></div>
+  <div class="divider"></div>
 
-<% if current_user %>
-
-  <div class="optionsBottom">
-    <% if @user['fullname'] == current_user.fullname %>
-
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-    <% end %>
-  </div>
-
-<% end %>
+  <% if current_user %>
+    <div>
+      <% if @user['fullname'] == current_user.fullname %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <% end %>
+    </div>
+  <% end %>
 
 </div>

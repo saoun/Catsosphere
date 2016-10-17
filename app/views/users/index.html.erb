@@ -2,15 +2,17 @@
 
 <div class="container">
 
+  <h3> View Users </h3>
+  <div class="divider"></div>
 
-<h2> View Users </h2>
+  <% @users.each do |user| %>
+    <div class="user">
+      <h6>Name: </h6><a href="users/<%=user['id']%>"><%= user['fullname']%></a><br>
+      <h6>Contact: </h6> <%= user['email'] %><br>
+      <h6>Bio: </h6> <%= user['bio'] %><br>
+      <div class="divider"></div>
+    </div>
+  <% end %>
 
-<% @users.each do |user| %>
-  <div class="user">
-    <h6>Name: </h6><a href="users/<%=user['id']%>"><%= user['fullname']%></a><br>
-    <h6>Contact: </h6> <%= user['email'] %><br>
-    <h6>Bio: </h6> <%= user['bio'] %><br>
-    <div class="divider"></div>
-  </div>
-<% end %>
+</div>
 
