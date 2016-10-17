@@ -7,7 +7,7 @@
 <% if current_user %>
   <% if @user['fullname'] == current_user.fullname %>
 
-    <% if current_user.fullname == "" %>
+    <% if current_user.fullname == "" || current_user.fullname == nil %>
       <h3><%= "Hi There!" %></h3>
     <%else%>
       <h3><%= "Hi, #{current_user.fullname}" %></h3>
