@@ -10,8 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
+//= require rails_emoji_picker
 //= require jquery_ujs
 //= require turbolinks
-//= require rails_emoji_picker
 //= require_tree .
