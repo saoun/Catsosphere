@@ -7,7 +7,7 @@
 
   <% @users.each do |user| %>
     <div class="user">
-      <h6>Name: </h6><a href="users/<%=user['id']%>"><%= user['fullname']%></a><br>
+      <h6>Name: </h6><a href="users/<%=user['id']%>"> <%= user['fullname']%></a><br>
       <h6>Contact: </h6> <%= user['email'] %><br>
       <h6>Bio: </h6> <%= user['bio'] %><br>
       <div class="divider"></div>

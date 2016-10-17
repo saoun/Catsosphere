@@ -3,7 +3,7 @@
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .user h6{
-  display: inline;
+  display: inline-block;
 }
 
 .user a {
@@ -18,40 +18,8 @@
   margin-top: 30px;
 }
 
+.field .form-control {
+  width: 300px;
+}
 
-// .profile {
-//   margin-left: 60px;
-//   margin-top: 100px;
-//   max-width: 800px;
-
-// }
-
-// .users {
-//   margin-left: 60px;
-//   margin-top: 100px;
-// }
-
-// .profile h1{
-//   font-weight: 400;
-// }
-
-// .welcome {
-//   font-weight: 400;
-// }
-
-// .optionsMiddle h3, p {
-//   display: inline-block;
-// }
-
-// .optionsMiddle a {
-//   color: #f3554c;
-// }
-
-// .optionsMiddle a:hover {
-//   color: #ad3b34;
-// }
-
-// .optionsMiddle img {
-//   border-radius: 23px;
-// }
 

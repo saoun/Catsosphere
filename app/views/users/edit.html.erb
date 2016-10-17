@@ -8,19 +8,19 @@
     <%else%>
       <h3><%= "Hi, #{current_user.fullname}" %></h3>
     <%end%>
-    <div class="optionsTop">
+    <div>
       <h5><a href ="/users/<%=current_user.id%>">Back</a></h5>
     </div>
 
-    <div class="dividerComment"></div>
+    <div class="divider"></div>
 
-    <div class="formDiv">
+    <div>
       <%= render "form" %>
     </div>
 
-    <div class="dividerComment"></div>
+    <div class="divider"></div>
 
-    <div class="optionsBottom">
+    <div >
 
       <%= link_to "Sign Out", "/signout" %> <br>
     </div>

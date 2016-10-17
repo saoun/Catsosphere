@@ -2,16 +2,15 @@
 
 
   <div class="field">
-    <%= f.label :fullname %><br>
-    <%= f.text_field :fullname %><br>
+    <%= f.label :full_name %><br>
+    <%= f.text_field :fullname, class: 'form-control' %><br>
     <%= f.label :bio %><br>
-    <%= f.text_field :bio %><br>
+    <%= f.text_field :bio, class: 'form-control' %><br>
     <%= f.label :contact %><br>
-    <%= f.text_field :contact %><br>
+    <%= f.text_field :email, class: 'form-control' %><br>
     <%= f.file_field :avatar %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit "Update", :class => "btn btn-default" %>
+
 <% end %>
