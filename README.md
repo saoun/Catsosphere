@@ -22,4 +22,13 @@ Rails 4
 ## How it works
 Users can sign up and create a profile<br>
 Users can add posts and comments <br>
-Users can view the profile of other users
+Users can view the profile of other users <br>
+Users can message each other <br>
+
+## Additional Features
+AWS S3 integration for image and avatar uploads
+Devise authentication
+Emoji keyboard
+Threaded Replies
+Post editing time limit to 1 hour
+Bootstrap
