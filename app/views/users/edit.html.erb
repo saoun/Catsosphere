@@ -2,29 +2,22 @@
 
 <div class="container">
 
+<%= link_to "&larr; Back".html_safe, user_path %>
+
   <% if current_user %>
     <% if current_user.fullname == "" %>
       <h3><%= "Hi There!" %></h3>
     <%else%>
       <h3><%= "Hi, #{current_user.fullname}" %></h3>
     <%end%>
-    <div>
-      <h5><a href ="/users/<%=current_user.id%>">Back</a></h5>
-    </div>
 
     <div class="divider"></div>
 
-    <div>
-      <%= render "form" %>
-    </div>
+    <%= render "form" %>
 
     <div class="divider"></div>
 
-    <div >
-
-      <%= link_to "Sign Out", "/signout" %> <br>
-    </div>
-
+    <%= link_to "Sign Out", "/signout" %> <br>
 
 
   <% else %>
