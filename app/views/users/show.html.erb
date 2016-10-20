@@ -34,7 +34,7 @@
     <h6>Full Name: </h6> <%= @user['fullname'] %><br>
     <h6>Bio:</h6> <%= @user['bio'] %><br>
     <h6>Contact:</h6> <%= @user['email'] %><br>
-    <% if @user['fullname'] == current_user.fullname %>
+    <% if @user['id'] == current_user.id %>
       <h6><%= link_to 'Check your inbox', conversations_path %></h6><br>
     <%else%>
       <h6><%= link_to 'Message user!', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post'%></h6><br>
@@ -46,7 +46,7 @@
   <div class="divider"></div>
 
   <% if current_user %>
-    <% if @user['fullname'] == current_user.fullname %>
+    <% if @user['id'] == current_user.id %>
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
     <% end %>
   <% end %>
