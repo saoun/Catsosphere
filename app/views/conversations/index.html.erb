@@ -16,7 +16,11 @@
         <% recipient = User.find(conversation.sender_id) %>
       <% end %>
 
-      <h5><%= link_to recipient.fullname, conversation_messages_path(conversation)%></h5>
+      <% if recipient.fullname == "" || recipient.fullname == nil %>
+        <h5><%= link_to recipient.email, conversation_messages_path(conversation)%></h5>
+      <% else %>
+        <h5><%= link_to recipient.fullname, conversation_messages_path(conversation)%></h5>
+      <% end %>
     <% end %>
   <% end %>
 

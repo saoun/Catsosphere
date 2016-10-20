@@ -19,7 +19,7 @@
 
   <%end%>
 
-  <% if @user['fullname'] != current_user.fullname %>
+  <% if @user['id'] != current_user.id %>
     <h3><%= @user['fullname'] %></h3>
   <% end %>
 
