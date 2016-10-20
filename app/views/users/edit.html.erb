@@ -5,7 +5,7 @@
 <%= link_to "&larr; Back".html_safe, user_path %>
 
   <% if current_user %>
-    <% if current_user.fullname == "" || if current_user.fullname == nil %>
+    <% if current_user.fullname == "" || current_user.fullname == nil %>
       <h3><%= "Hi There!" %></h3>
     <%else%>
       <h3><%= "Hi, #{current_user.fullname}" %></h3>
