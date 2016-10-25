@@ -31,4 +31,5 @@ Devise authentication<br>
 Emoji keyboard<br>
 Threaded Replies<br>
 Post editing time limit to 1 hour<br>
-Bootstrap
+Bootstrap<br>
+User Messaging
