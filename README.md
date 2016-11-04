@@ -1,7 +1,5 @@
 # README
 
-Catsosphere: basic CRUD app / blog with Twitter oAuth
-
 ## Code
 
 Ruby on Rails, HTML, CSS
@@ -28,8 +26,8 @@ Users can message each other <br>
 ## Additional Features
 AWS S3 integration for image and avatar uploads<br>
 Devise authentication<br>
+User Messaging<br>
 Emoji keyboard<br>
 Threaded Replies<br>
 Post editing time limit to 1 hour<br>
-Bootstrap<br>
-User Messaging
+Bootstrap and responsive pages<br>
